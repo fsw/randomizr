@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-DAYS="022 023 024 025 026 029 031 036"
+DAYS="022 023 024 025 026 029 031 036 037 038 039 40"
 MATCH=$(date +%j)
 
 if echo $DAYS | grep -qw $MATCH; then
@@ -14,7 +14,8 @@ if echo $DAYS | grep -qw $MATCH; then
 		git push
 	done
 else
-	echo "NOPE"
+
+	echo "NOPE $MATCH"
 	exit 1
 fi
 
